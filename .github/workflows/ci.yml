@@ -18,5 +18,8 @@ jobs:
         with:
           go-version: "1.23.0"
 
-      - name: Echo Go verrsion
+      - name: Echo Go version
         run: go test ./... -cover
+
+      - name: go format
+        run: test -z $(go fmt ./...)
