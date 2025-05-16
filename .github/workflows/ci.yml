@@ -21,5 +21,8 @@ jobs:
       - name: Echo Go version
         run: go test ./... -cover
 
-      - name: go format
+      - name: go format test
         run: test -z $(go fmt ./...)
+
+      - name: go format
+        run: go fmt ./...
